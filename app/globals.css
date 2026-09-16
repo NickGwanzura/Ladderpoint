@@ -279,3 +279,10 @@ footer .newsletter label,footer .newsletter input,footer .newsletter input::plac
 .intro h2{max-width:980px;margin:30px auto 0;text-align:center}
 .intro-copy{max-width:650px;margin:42px auto 0;text-align:center}
 .intro-copy .text-link{justify-content:center}
+
+/* Keep the portrait caption below the image instead of over the subject. */
+.portrait-photo{display:block;min-height:0;background:transparent;overflow:visible}
+.portrait-photo .portrait-frame{position:relative;min-height:510px;background:#eee;overflow:hidden}
+.portrait-photo figcaption{position:static;width:auto;padding:16px 0 0;background:none;color:var(--violet);text-align:left}
+@media(max-width:900px){.portrait-photo .portrait-frame{min-height:400px}}
+@media(max-width:600px){.portrait-photo .portrait-frame{min-height:360px}}
