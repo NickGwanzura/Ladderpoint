@@ -107,3 +107,167 @@ em,i,.package-card h3 span,.portrait-monogram,.film-title,.film-title span{font-
 .empty-rule{background:#fff}
 @media(max-width:900px){.nav-inner{height:90px}.nav-links.is-open{top:89px;background:#000;color:#fff;border-color:#303030}}
 @media(max-width:600px){.nav-inner{height:78px}.nav-links.is-open{top:77px}.brand-logo{width:66px;height:66px}}
+
+/* Accent color pass: violet and blue add structure while the canvas stays white. */
+:root{--violet:#40376e;--blue:#36558f;--copper:var(--blue)}
+::selection{background:var(--violet);color:#fff}
+:focus-visible{outline-color:var(--blue)}
+.eyebrow,.page-hero>.eyebrow,.featured-service h2,.deliverables li:before{color:var(--violet)}
+.intro h2 em,.insights-empty h2 em{color:var(--blue)!important}
+.hero-copy h1 em{color:#8fa6d0!important}
+.cta h2 em{color:#8fa6d0!important}
+.process-num,.small-number{color:var(--blue)}
+.text-link:hover,.quiet-link:hover,.footer-top>div>a:hover{color:var(--blue)}
+.text-link{border-color:#b8bfd3}
+.nav-links a:after{background:var(--blue)}
+.nav-cta{border-color:var(--blue)}
+.button{background:#000;color:#fff;border-color:#000}
+.button:hover{background:var(--violet);border-color:var(--violet);color:#fff}
+.button.light{background:#fff;color:#000;border-color:#fff}
+.button.light:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.manifesto .eyebrow,.cta .eyebrow{color:#9daed2}
+.circle-link:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.package-card:hover{border-color:var(--blue);background:#f7f8fb}
+.category-list span{border-color:#b8bfd3}
+.empty-rule{background:var(--blue)}
+.film-title{color:#8fa6d0}
+.home-hero{box-shadow:inset 0 -5px 0 var(--violet)}
+
+/* Accent color pass: violet and blue add structure while the canvas stays white. */
+:root{--violet:#40376e;--blue:#36558f;--copper:var(--blue)}
+::selection{background:var(--violet);color:#fff}
+:focus-visible{outline-color:var(--blue)}
+.eyebrow,.page-hero>.eyebrow,.featured-service h2,.deliverables li:before{color:var(--violet)}
+.intro h2 em,.insights-empty h2 em{color:var(--blue)!important}
+.hero-copy h1 em{color:#8fa6d0!important}
+.cta h2 em{color:#8fa6d0!important}
+.process-num,.small-number{color:var(--blue)}
+.text-link:hover,.quiet-link:hover,.footer-top>div>a:hover{color:var(--blue)}
+.text-link{border-color:#b8bfd3}
+.nav-links a:after{background:var(--blue)}
+.nav-cta{border-color:var(--blue)}
+.button{background:#000;color:#fff;border-color:#000}
+.button:hover{background:var(--violet);border-color:var(--violet);color:#fff}
+.button.light{background:#fff;color:#000;border-color:#fff}
+.button.light:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.manifesto .eyebrow,.cta .eyebrow{color:#9daed2}
+.circle-link:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.package-card:hover{border-color:var(--blue);background:#f7f8fb}
+.category-list span{border-color:#b8bfd3}
+.empty-rule{background:var(--blue)}
+.film-title{color:#8fa6d0}
+.home-hero{box-shadow:inset 0 -5px 0 var(--violet)}
+
+/* Final palette: white canvas with black feature bands */
+:root{--ink:#000;--ivory:#fff;--stone:#d9d9d9;--copper:#000;--text:#171717;--muted:#666;--background:#fff;--foreground:#171717}
+html,body{background:#fff;color:#171717}
+body{color:#171717}
+p,.role,.section-note,.small-number,.hero-index{color:#666}
+h1,h2,h3,a,.eyebrow,label,.brand,.nav-cta,.quiet-link,.text-link{color:#171717}
+em,i,.package-card h3 span,.portrait-monogram,.film-title,.film-title span{font-style:normal!important;color:inherit!important}
+.nav{background:#fff;color:#171717;border-color:#d9d9d9}
+.nav.home-nav{background:transparent;color:#fff;border-color:#ffffff2b}
+.nav.home-nav.scrolled{background:#000;color:#fff;border-color:#303030}
+.nav-links a:after{background:currentColor}
+.nav-cta{border-color:currentColor}
+.menu-toggle{color:inherit}
+.hero-copy h1 em,.intro h2 em,.cta h2 em{color:inherit!important}
+.expertise-preview,.leadership,.values,.deliverables,.about-motif,.team-section,.team-card{background:#fff;color:#171717}
+.service-card,.stat,.process>div,.value-row,.team-image-band>div{border-color:#d9d9d9}
+.manifesto,.cta,footer,.ink,.film-feature{background:#000;color:#fff}
+.manifesto h2,.manifesto h2 span,.manifesto-bottom p,.cta h2,.cta .eyebrow,.cta-bottom p,.film-feature h2,.film-feature p,footer,.footer-top p,.footer-bottom,.footer-top .eyebrow,.footer-top>div>a:not(.brand){color:#fff}
+.manifesto-bottom{border-color:#333}
+.circle-link{border-color:#fff;color:#fff}
+.circle-link:hover{background:#fff;color:#000}
+.package-card{border-color:#d9d9d9;background:#fff}
+.package-card:hover{background:#f2f2f2}
+.package-card .eyebrow{color:#666}
+.featured-service h2,.deliverables li:before,.page-hero>.eyebrow{color:#171717}
+.portrait-placeholder{background:#eee}
+.portrait-photo img{filter:grayscale(1) contrast(1.08);object-fit:cover;object-position:center 18%}
+.portrait-placeholder>.eyebrow,.team-role{color:#171717}
+.team-photo{background:#eee}
+.team-monogram{color:#171717}
+.team-card-top{border-color:#d9d9d9}
+.portrait-photo figcaption{background:linear-gradient(transparent,#000);color:#fff}
+.field input,.field textarea,.field select{color:#171717;border-color:#bbb;background:#fff}
+.field input::placeholder,.field textarea::placeholder{color:#777}
+.newsletter>div{border-color:#777}
+.newsletter input{color:#fff}
+.footer-top>div>a:hover{color:#fff}
+.page-hero h1,.page-hero>p,.service-detail h2,.package-detail h2,.insights-empty h2,.tailored h2,.experience-item h2,.contact-layout aside h2{color:#171717}
+.category-list span{border-color:#bbb;color:#171717}
+.empty-rule{background:#171717}
+.button,.button.light{background:#000;color:#fff;border-color:#000}
+.button:hover,.button.light:hover{background:#333;color:#fff;border-color:#333}
+.text-link,.quiet-link{border-color:#bbb}
+.text-link:hover,.quiet-link:hover{color:#000}
+@media(max-width:900px){.nav-inner{height:90px}.nav-links.is-open{top:89px;background:#fff;color:#171717;border-color:#d9d9d9}}
+@media(max-width:600px){.nav-inner{height:78px}.nav-links.is-open{top:77px}.brand-logo{width:66px;height:66px}}
+
+
+/* Accent color pass: violet and blue add structure while the canvas stays white. */
+:root{--violet:#40376e;--blue:#36558f;--copper:var(--blue)}
+::selection{background:var(--violet);color:#fff}
+:focus-visible{outline-color:var(--blue)}
+.eyebrow,.page-hero>.eyebrow,.featured-service h2,.deliverables li:before{color:var(--violet)}
+.intro h2 em,.insights-empty h2 em{color:var(--blue)!important}
+.hero-copy h1 em{color:#8fa6d0!important}
+.cta h2 em{color:#8fa6d0!important}
+.process-num,.small-number{color:var(--blue)}
+.text-link:hover,.quiet-link:hover,.footer-top>div>a:hover{color:var(--blue)}
+.text-link{border-color:#b8bfd3}
+.nav-links a:after{background:var(--blue)}
+.nav-cta{border-color:var(--blue)}
+.button{background:#000;color:#fff;border-color:#000}
+.button:hover{background:var(--violet);border-color:var(--violet);color:#fff}
+.button.light{background:#fff;color:#000;border-color:#fff}
+.button.light:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.manifesto .eyebrow,.cta .eyebrow{color:#9daed2}
+.circle-link:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.package-card:hover{border-color:var(--blue);background:#f7f8fb}
+.category-list span{border-color:#b8bfd3}
+.empty-rule{background:var(--blue)}
+.film-title{color:#8fa6d0}
+.home-hero{box-shadow:inset 0 -5px 0 var(--violet)}
+
+
+/* Final text contrast: black on white, solid white on dark panels. */
+:root{--muted:#171717}
+p,.role,.section-note,.hero-index,.package-card .eyebrow,.team-role,.footer-top p,.footer-bottom,.cta-bottom p,.film-feature p{color:#171717}
+.small-number,.process-num{color:var(--blue)}
+.page-hero>.eyebrow,.featured-service h2,.deliverables li:before,.eyebrow{color:var(--violet)}
+.home-hero,.home-hero .hero-copy,.home-hero .hero-copy h1,.home-hero .hero-copy h1 em,.home-hero .hero-tagline,.home-hero .hero-body,.home-hero .hero-signal,.home-hero .hero-bottom,.home-hero .hero-bottom a{color:#fff}
+.nav.home-nav,.nav.home-nav .brand,.nav.home-nav .nav-links,.nav.home-nav .nav-cta,.nav.home-nav .menu-toggle{color:#fff}
+.manifesto,.manifesto h2,.manifesto h2 span,.manifesto p,.manifesto .eyebrow,.manifesto .manifesto-bottom p,.cta,.cta h2,.cta h2 em,.cta p,.cta .eyebrow,footer,footer p,footer .eyebrow,footer a,.footer-top p,.footer-bottom,.film-feature,.film-feature h2,.film-feature p,.film-feature .eyebrow,.ink,.ink p{color:#fff}
+.footer-top>div>a:not(.brand){color:#fff}
+.portrait-photo img{filter:none}
+
+.home-hero .quiet-link{color:#fff}
+.home-hero .quiet-link:hover{color:#8fa6d0}
+.nav .brand-logo{width:96px;height:96px}
+@media(max-width:600px){.nav .brand-logo{width:78px;height:78px}}
+
+
+/* Mobile hero spacing and contrast polish. */
+.home-hero .quiet-link{color:#fff!important;opacity:1;text-shadow:0 1px 8px #000}
+@media(max-width:900px){.hero-grid{padding-top:190px}.hero-copy h1{margin-top:44px}.hero-actions{margin-top:40px}}
+@media(max-width:600px){.hero-grid{padding-top:172px}.hero-copy h1{margin-top:40px}.hero-actions{margin-top:34px}.hero-tagline{line-height:1.55}.hero-body{line-height:1.8}}
+
+
+/* Footer logo scale. */
+.footer-logo{width:160px;height:128px}
+@media(max-width:600px){.footer-logo{width:132px;height:108px}}
+
+.footer .newsletter label,.footer .newsletter input,.footer .newsletter input::placeholder,.footer .newsletter button{color:#fff}
+
+footer .newsletter label,footer .newsletter input,footer .newsletter input::placeholder,footer .newsletter button{color:#fff}
+
+
+/* Footer navigation pointers. */
+.footer-top>div>a:not(.brand){display:flex;align-items:flex-start;justify-content:flex-start;gap:8px}
+.footer-top>div>a:not(.brand) svg{flex:0 0 auto;margin-top:3px}
+.footer-top>div>a:not(.brand) svg{color:var(--blue);opacity:.85;transition:transform .2s,opacity .2s}
+.footer-top>div>a:not(.brand):hover svg{transform:translate(2px,-2px);opacity:1}
+
+.footer-top>div>a:not(.brand){justify-content:flex-start!important;width:max-content;max-width:100%}
