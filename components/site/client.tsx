@@ -1,16 +1,17 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowRight, Menu, X, Check } from 'lucide-react';
-import { Ladder } from './primitives';
 const links = ['Expertise','Experience','Packages','About','Insights','Contact'];
 export function Navigation() {
  const path = usePathname(); const [open,setOpen]=useState(false); const [scrolled,setScrolled]=useState(false);
  useEffect(()=>{const f=()=>setScrolled(window.scrollY>30); f();window.addEventListener('scroll',f,{passive:true});return()=>window.removeEventListener('scroll',f)},[]);
  useEffect(()=>{if(!open)return;const f=(e:KeyboardEvent)=>{if(e.key==='Escape'){setOpen(false);document.getElementById('menu-toggle')?.focus()}};document.addEventListener('keydown',f);return()=>document.removeEventListener('keydown',f)},[open]);
- return <header className={`nav ${path==='/'?'home-nav':''} ${scrolled?'scrolled':''}`}><div className="nav-inner"><Link href="/" className="brand" aria-label="Ladder Point home" onClick={()=>setOpen(false)}><Ladder/><span>LADDER POINT<small>THE HOUSE OF IDEAS</small></span></Link><nav aria-label="Main navigation" className={open?'nav-links is-open':'nav-links'}>{links.map(l=><Link key={l} onClick={()=>setOpen(false)} aria-current={path===`/${l.toLowerCase()}`?'page':undefined} href={`/${l.toLowerCase()}`}>{l}</Link>)}</nav><Link className="nav-cta" href="/contact">Start a Conversation <ArrowUpRight size={16}/></Link><button id="menu-toggle" className="menu-toggle" aria-label={open?'Close navigation':'Open navigation'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></div></header>
+ const logo = path==='/' && !scrolled ? '/logo-white.svg' : '/logo-color.svg';
+ return <header className={`nav ${path==='/'?'home-nav':''} ${scrolled?'scrolled':''}`}><div className="nav-inner"><Link href="/" className="brand" aria-label="Ladder Point home" onClick={()=>setOpen(false)}><Image className="brand-logo" src={logo} alt="Ladder Point — The House of Ideas" width={88} height={88} priority/></Link><nav aria-label="Main navigation" className={open?'nav-links is-open':'nav-links'}>{links.map(l=><Link key={l} onClick={()=>setOpen(false)} aria-current={path===`/${l.toLowerCase()}`?'page':undefined} href={`/${l.toLowerCase()}`}>{l}</Link>)}</nav><Link className="nav-cta" href="/contact">Start a Conversation <ArrowUpRight size={16}/></Link><button id="menu-toggle" className="menu-toggle" aria-label={open?'Close navigation':'Open navigation'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button></div></header>
 }
 export function Reveal({children,className=''}:{children:React.ReactNode;className?:string}) { const reduced=useReducedMotion();return <motion.div className={className} initial={false} whileInView={reduced?{}:{opacity:[0.75,1],y:[18,0]}} viewport={{once:true,amount:0.12}} transition={{duration:.6}}>{children}</motion.div> }
 export function HeroWords(){const reduced=useReducedMotion();return <h1>{['The House','of Ideas'].map((t,i)=><motion.span key={t} initial={false} animate={reduced?{}:{opacity:[.2,1],y:[25,0]}} transition={{duration:.9,delay:i*.15}}>{i===1?<em>{t}</em>:t}</motion.span>)}</h1>}

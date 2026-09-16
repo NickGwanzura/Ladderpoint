@@ -44,3 +44,6 @@
 @media(max-width:900px){.team-grid{grid-template-columns:1fr 1fr}.team-card:last-child{grid-column:1/-1;max-width:calc(50% - 9px)}}
 @media(max-width:900px){.team-image-band{grid-template-columns:1fr;gap:25px;padding-bottom:80px}.team-image-band>div{max-width:420px}}
 @media(max-width:600px){.team-grid{grid-template-columns:1fr}.team-card:last-child{grid-column:auto;max-width:none}.team-card{padding:24px}.team-card-top{min-height:100px}.team-monogram{font-size:5.5rem}.team-card h3{font-size:2.4rem}.team-image-band{padding-bottom:65px}.team-image-band p{font-size:1.8rem}}
+.brand-logo{display:block;width:88px;height:72px;object-fit:contain}
+.footer-logo{width:110px;height:90px}
+@media(max-width:600px){.brand-logo{width:64px;height:60px}.footer-logo{width:88px;height:76px}}
