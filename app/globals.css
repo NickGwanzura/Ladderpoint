@@ -47,3 +47,9 @@
 .brand-logo{display:block;width:88px;height:72px;object-fit:contain}
 .footer-logo{width:110px;height:90px}
 @media(max-width:600px){.brand-logo{width:64px;height:60px}.footer-logo{width:88px;height:76px}}
+.nav{background:#FFFFFF;color:var(--ink);border-bottom:1px solid var(--stone)}
+.nav-inner{position:relative;height:116px}
+.brand-logo{width:62px;height:62px}
+.nav-links{position:absolute;left:50%;transform:translateX(-50%);gap:28px}
+@media(max-width:900px){.nav-links.is-open{top:115px;left:0;right:0;transform:none}}
+@media(max-width:600px){.nav-inner{height:78px}.nav-links.is-open{top:77px}.brand-logo{width:58px;height:58px}}
