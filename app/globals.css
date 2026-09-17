@@ -273,6 +273,30 @@ footer .newsletter label,footer .newsletter input,footer .newsletter input::plac
 
 .footer-top>div>a:not(.brand){justify-content:flex-start!important;width:max-content;max-width:100%}
 
+/* Editorial interaction polish: quiet movement, clear hierarchy, and deliberate accents. */
+.section-heading h2,.intro h2,.leadership-grid h2,.cta h2{ text-wrap:balance }
+.nav-cta svg,.text-link svg,.quiet-link svg,.button svg,.circle-link svg,.package-arrow{transition:transform .24s cubic-bezier(.16,1,.3,1)}
+.nav-cta:hover svg,.text-link:hover svg,.quiet-link:hover svg,.button:hover svg{transform:translate(3px,-3px)}
+.service-card{position:relative;transition:background .24s ease,transform .24s ease,padding-left .24s ease}
+.service-card:before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--blue);transform:scaleY(0);transform-origin:top;transition:transform .28s cubic-bezier(.16,1,.3,1)}
+.service-card:hover{background:#f7f8fb;padding-left:14px;transform:translateY(-2px)}
+.service-card:hover:before{transform:scaleY(1)}
+.service-card:hover .text-link svg{transform:translate(3px,-3px)}
+.package-card{transition:background .24s ease,border-color .24s ease,transform .24s ease,box-shadow .24s ease}
+.package-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px #17171712}
+.package-card:hover .package-arrow{transform:translate(4px,-4px);color:var(--blue)}
+.stat strong{transition:color .24s ease}
+.stat:hover strong{color:var(--violet)}
+.process>div{transition:border-color .24s ease,transform .24s ease}
+.process>div:hover{border-color:var(--blue);transform:translateY(-4px)}
+.process>div:hover .process-num{color:var(--violet)}
+.team-card{transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
+.team-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 14px 32px #17171712}
+.cta{position:relative;isolation:isolate;overflow:hidden}
+.cta:before{content:'';position:absolute;z-index:-1;left:0;top:0;bottom:0;width:5px;background:var(--violet)}
+.manifesto{border-top:1px solid #40376e}
+@media(max-width:600px){.service-card:hover{padding-left:10px}.cta:before{width:3px}}
+
 
 /* Center the opening statement section. */
 .intro{display:block;text-align:center}
