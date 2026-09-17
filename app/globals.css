@@ -222,6 +222,15 @@ body button {
   font-family: var(--font-sans);
 }
 
+/* Keep every text layer readable on the black editorial panels. */
+.ink h2,
+.ink h3,
+.ink p,
+.ink .eyebrow,
+.ink a {
+  color: #fff;
+}
+
 
 /* Accent color pass: violet and blue add structure while the canvas stays white. */
 :root{--violet:#40376e;--blue:#36558f;--copper:var(--blue)}
