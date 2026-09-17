@@ -392,3 +392,7 @@ footer .newsletter label,footer .newsletter input,footer .newsletter input::plac
 
 /* Let the ladder visual meet the next section without extra bottom padding. */
 .about-story { padding-bottom: 0; }
+
+/* Keep the leadership work image anchored to the left of its grid column. */
+.team-image-band { justify-items: start; }
+.team-image-band img { justify-self: start; object-position: left center; }
