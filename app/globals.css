@@ -389,3 +389,6 @@ footer .newsletter label,footer .newsletter input,footer .newsletter input::plac
   .team-image-band img,
   .team-photo.has-image { box-shadow: 0 8px 22px rgba(23, 23, 23, .08); }
 }
+
+/* Let the ladder visual meet the next section without extra bottom padding. */
+.about-story { padding-bottom: 0; }
