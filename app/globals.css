@@ -231,6 +231,11 @@ body button {
   color: #fff;
 }
 
+/* Align the leadership portrait with the start of its copy column. */
+.leadership-grid {
+  align-items: start;
+}
+
 
 /* Accent color pass: violet and blue add structure while the canvas stays white. */
 :root{--violet:#40376e;--blue:#36558f;--copper:var(--blue)}
