@@ -341,3 +341,51 @@ footer .newsletter label,footer .newsletter input,footer .newsletter input::plac
 .portrait-photo figcaption{position:static;width:auto;padding:16px 0 0;background:none;color:var(--violet);text-align:left}
 @media(max-width:900px){.portrait-photo .portrait-frame{min-height:400px}}
 @media(max-width:600px){.portrait-photo .portrait-frame{min-height:360px}}
+
+/* Image treatment: crisp frames, consistent depth, and a gentle lift on pointer devices. */
+.portrait-photo .portrait-frame,
+.team-image-band img,
+.team-photo.has-image {
+  border: 1px solid #d7dbe4;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(23, 23, 23, .08);
+  transition: transform .5s cubic-bezier(.16, 1, .3, 1), box-shadow .5s ease, border-color .3s ease;
+}
+.portrait-photo .portrait-frame,
+.team-photo.has-image { isolation: isolate; }
+.portrait-photo .portrait-frame::after,
+.team-photo.has-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(54, 85, 143, .12), transparent 42%, rgba(64, 55, 110, .1));
+  border-radius: inherit;
+  opacity: .45;
+  transition: opacity .5s ease;
+}
+.portrait-photo .portrait-frame img,
+.team-photo.has-image img,
+.team-image-band img {
+  transition: transform .8s cubic-bezier(.16, 1, .3, 1), filter .5s ease;
+}
+@media (hover: hover) {
+  .portrait-photo:hover .portrait-frame,
+  .team-image-band:hover img,
+  .team-card:hover .team-photo.has-image {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 20px 46px rgba(23, 23, 23, .14);
+  }
+  .portrait-photo:hover .portrait-frame img,
+  .team-image-band:hover img,
+  .team-card:hover .team-photo.has-image img { transform: scale(1.025); }
+  .portrait-photo:hover .portrait-frame::after,
+  .team-card:hover .team-photo.has-image::after { opacity: .75; }
+}
+@media (max-width: 600px) {
+  .portrait-photo .portrait-frame,
+  .team-image-band img,
+  .team-photo.has-image { box-shadow: 0 8px 22px rgba(23, 23, 23, .08); }
+}
