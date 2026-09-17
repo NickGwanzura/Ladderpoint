@@ -206,6 +206,22 @@ em,i,.package-card h3 span,.portrait-monogram,.film-title,.film-title span{font-
 @media(max-width:900px){.nav-inner{height:90px}.nav-links.is-open{top:89px;background:#fff;color:#171717;border-color:#d9d9d9}}
 @media(max-width:600px){.nav-inner{height:78px}.nav-links.is-open{top:77px}.brand-logo{width:66px;height:66px}}
 
+/* Body copy uses General Sans across every content surface. */
+body,
+body p,
+body li,
+body label,
+body input,
+body textarea,
+body select,
+body button {
+  font-family: var(--font-sans);
+}
+.manifesto-bottom p,
+.team-image-band p {
+  font-family: var(--font-sans);
+}
+
 
 /* Accent color pass: violet and blue add structure while the canvas stays white. */
 :root{--violet:#40376e;--blue:#36558f;--copper:var(--blue)}
@@ -257,8 +273,8 @@ p,.role,.section-note,.hero-index,.package-card .eyebrow,.team-role,.footer-top 
 
 
 /* Footer logo scale. */
-.footer-logo{width:160px;height:128px}
-@media(max-width:600px){.footer-logo{width:132px;height:108px}}
+.footer-logo{width:170px;height:170px;object-fit:contain;object-position:left center}
+@media(max-width:600px){.footer-logo{width:132px;height:132px}}
 
 .footer .newsletter label,.footer .newsletter input,.footer .newsletter input::placeholder,.footer .newsletter button{color:#fff}
 

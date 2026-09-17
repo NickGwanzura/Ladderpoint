@@ -2,7 +2,7 @@ export const site = {
   name: 'Ladder Point', tagline: 'From Ideas to Impact. From Impact to Influence.',
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '',
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://ladderpointcomms.com',
 };
 export const services = [
   { slug: 'storytelling', name: 'Storytelling', short: 'Stories that make the complex clear. And the important impossible to ignore.', description: 'At the heart of every meaningful connection is a story. We find the human truth in complex ideas and shape it into a narrative people understand, remember and act on.', help: 'From the first interview to the final edit, we bring strategy and craft together across words, photographs, film and digital platforms.', deliverables: ['Strategic narrative development', 'Digital communications strategy', 'Content planning', 'Copywriting', 'Scripting', 'Interviews', 'Photography', 'Videography', 'Editing', 'Animation', 'Social media content', 'Distribution and media engagement'] },
