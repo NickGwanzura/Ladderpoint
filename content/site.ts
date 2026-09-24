@@ -1,7 +1,8 @@
 export const site = {
   name: 'Ladder Point', tagline: 'From Ideas to Impact. From Impact to Influence.',
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '',
-  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '',
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'doreenhove@gmail.com',
+  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '0772939713,0772565960',
+  address: '134 Goodhope Road',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://ladderpointcomms.com',
 };
 export const services = [

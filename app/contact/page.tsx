@@ -7,6 +7,7 @@ import { site } from '@/content/site';
 export const metadata: Metadata = { title: 'Start a Conversation', description: 'Bring Ladder Point a challenge, a half-formed idea or a story that needs shaping.' };
 
 export default function Contact() {
+  const phones = site.phone.split(',').map(phone => phone.trim()).filter(Boolean);
   return <>
     <Hero eyebrow="Contact" index="Start a conversation" title={<>Good things start with <em>a conversation.</em></>} text="Have a challenge, a half-formed idea or a story that needs shaping? Bring it to Ladder Point." />
     <section className="section wrap contact-layout">
@@ -16,8 +17,9 @@ export default function Contact() {
         <p>You don’t need a finished brief. A question, an ambition or a starting point is enough.</p>
         <div className="contact-details">
           <span className="deliverables-label">Contact</span>
+          <p>{site.address}</p>
           {site.email ? <a href={`mailto:${site.email}`}><Mail size={16} />{site.email}</a> : <p><Mail size={16} />Email details coming soon.</p>}
-          {site.phone ? <a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}><Phone size={16} />{site.phone}</a> : <p><Phone size={16} />Phone details coming soon.</p>}
+          {phones.length ? phones.map(phone => <a key={phone} href={`tel:${phone.replace(/[^+\d]/g, '')}`}><Phone size={16} />{phone}</a>) : <p><Phone size={16} />Phone details coming soon.</p>}
         </div>
       </aside>
       <InquiryForm />

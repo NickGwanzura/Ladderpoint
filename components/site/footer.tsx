@@ -27,6 +27,7 @@ export function Footer() {
         <span>© {new Date().getFullYear()} Ladder Point. All rights reserved.</span>
         <span>Ideas with purpose. Stories with impact.</span>
         <span>Social channels coming soon</span>
+        <a href="https://spiritusglobal.tech" target="_blank" rel="noopener noreferrer">Developed by Spiritus Global</a>
       </div>
     </div>
   </footer>;
