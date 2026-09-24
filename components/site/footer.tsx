@@ -3,4 +3,31 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { services } from '@/content/site';
 import { Newsletter } from './client';
-export function Footer(){return <footer><div className="wrap"><div className="footer-top"><div><Link href="/" className="brand" aria-label="Ladder Point home"><Image className="brand-logo footer-logo" src="/logo-white.svg" alt="Ladder Point — The House of Ideas" width={170} height={170} sizes="(max-width: 600px) 132px, 170px" /></Link><p>From Ideas to Impact.<br/>From Impact to Influence.</p></div><div><span className="eyebrow">EXPLORE</span>{['Expertise','Experience','Packages','About','Insights','Contact'].map(l=><Link key={l} href={`/${l.toLowerCase()}`}><ArrowUpRight size={12} aria-hidden="true" /><span>{l}</span></Link>)}</div><div className="footer-services"><span className="eyebrow">WHAT WE DO</span>{services.map(s=><Link key={s.slug} href={`/expertise#${s.slug}`}><ArrowUpRight size={12} aria-hidden="true" /><span>{s.name}</span></Link>)}</div><Newsletter/></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Ladder Point. All rights reserved.</span><span>Ideas with purpose. Stories with impact.</span><span>Social channels coming soon</span></div></div></footer>}
+
+export function Footer() {
+  return <footer className="footer">
+    <div className="wrap">
+      <div className="footer-top">
+        <div className="footer-brand">
+          <Link href="/" className="brand" aria-label="Ladder Point home"><Image className="footer-logo" src="/logo-white.svg" alt="Ladder Point — The House of Ideas" width={240} height={240} /></Link>
+          <p>From Ideas to Impact.<br />From Impact to Influence.</p>
+        </div>
+        <div className="footer-col">
+          <span className="footer-label">Explore</span>
+          {['Expertise', 'Experience', 'Packages', 'About', 'Insights', 'Contact'].map(l => <Link key={l} href={`/${l.toLowerCase()}`}>{l}<ArrowUpRight size={12} aria-hidden="true" /></Link>)}
+        </div>
+        <div className="footer-col">
+          <span className="footer-label">What we do</span>
+          {services.map(s => <Link key={s.slug} href={`/expertise#${s.slug}`}>{s.name}<ArrowUpRight size={12} aria-hidden="true" /></Link>)}
+        </div>
+        <Newsletter />
+      </div>
+      <p className="footer-wordmark" aria-hidden="true">The House of <em>Ideas</em></p>
+      <div className="footer-bottom">
+        <span>© {new Date().getFullYear()} Ladder Point. All rights reserved.</span>
+        <span>Ideas with purpose. Stories with impact.</span>
+        <span>Social channels coming soon</span>
+      </div>
+    </div>
+  </footer>;
+}
